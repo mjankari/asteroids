@@ -48,11 +48,11 @@ def main():
             if obj.check_collisions(player):
                 print("Game over!")
                 sys.exit()
-            
+
             for bullet in bullets:
                 if bullet.check_collisions(obj):
                     bullet.kill()
-                    obj.kill()
+                    obj.split()
 
         for sprite in drawable:
             sprite.draw(screen)
